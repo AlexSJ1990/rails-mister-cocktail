@@ -1,9 +1,20 @@
-<h1>Cocktails</h1>
+<!-- <h1>Cocktails</h1> -->
 
-<ul>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1516481025691-ba0f3e6d43b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c27a03efea95e481e6befb649d5db144&auto=format&fit=crop&w=1650&q=80');">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <p>view or upload a cocktail below</p>
+  </div>
+</div>
+
+ <div class="container">
   <% @cocktails.each do |cocktail| %>
-<li> <%= link_to cocktail.name, cocktail_path(cocktail) %>  </li>
-<% end %>
-</ul>
+    <div class="row card">
+      <div class="col-xs-12 col-sm-4 card-description">
+        <h2> <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-description" %>  </h2>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 
