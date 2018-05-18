@@ -11,6 +11,8 @@
 # Ingredient.create(name: "mint leaves")
 
 puts 'Cleaning database...'
+Cocktail.destroy_all
+Dose.destroy_all
 Ingredient.destroy_all
 
 puts 'Creating Co...'
@@ -23,6 +25,36 @@ ingredient_attributes = [
   },
   {
     name: "mint-leaves"
+  },
+  {
+    name: "Rum"
+  },
+  {
+    name: "Coke"
+  },
+  {
+    name: "Gin"
+  },
+  {
+    name: "Orange"
+  },
+  {
+    name: "Vodka"
+  },
+  {
+    name: "Grenadine"
+  },
+  {
+    name: "Milk"
+  },
+  {
+    name: "Aperol"
+  },
+  {
+    name: "Prosecco"
+  },
+  {
+    name: "Soda Water"
   }
 ]
 Ingredient.create!(ingredient_attributes)
